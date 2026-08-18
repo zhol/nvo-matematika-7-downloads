@@ -1,6 +1,10 @@
 blank_issues_enabled: false
 
 contact_links:
+  - name: "📘 Помощ и правила за обратна връзка"
+    url: "https://github.com/zhol/nvo-matematika-7-downloads/blob/main/SUPPORT.md"
+    about: "Прочети къде да зададеш въпрос, как да съобщиш проблем и какво не трябва да публикуваш."
+
   - name: "🙋 Не разбирам задача или част от приложението"
     url: "https://github.com/zhol/nvo-matematika-7-downloads/discussions"
     about: "Задай учебен въпрос в категорията „Въпроси и помощ“. Не създавай Issue, ако просто имаш нужда от обяснение."
