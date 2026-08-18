@@ -4,15 +4,15 @@
 
 ## Последна официална версия
 
-**Версия:** v0.4.0  
+**Версия:** v0.5.0  
 **Платформа:** Windows x64  
 **Статус:** официална стабилна версия
 
 ### Изтегляне
 
-[⬇️ Изтегли НВО Математика 7 за Windows](https://github.com/zhol/nvo-matematika-7-downloads/releases/latest/download/NVO-Matematika-7-Windows-x64-v0.4.0-unsigned.zip)
+[⬇️ Изтегли НВО Математика 7 за Windows](https://github.com/zhol/nvo-matematika-7-downloads/releases/latest/download/NVO-Matematika-7-Windows-x64-v0.5.0-unsigned.zip)
 
-[🔐 Изтегли SHA-256 файла](https://github.com/zhol/nvo-matematika-7-downloads/releases/latest/download/NVO-Matematika-7-Windows-x64-v0.4.0-unsigned.zip.sha256)
+[🔐 Изтегли SHA-256 файла](https://github.com/zhol/nvo-matematika-7-downloads/releases/latest/download/NVO-Matematika-7-Windows-x64-v0.5.0-unsigned.zip.sha256)
 
 [📦 Отвори страницата на последната версия](https://github.com/zhol/nvo-matematika-7-downloads/releases/latest)
 
@@ -32,13 +32,26 @@
 
 Не стартирайте приложението директно от вътрешността на ZIP файла.
 
+## Обновяване от v0.4.0
+
+Преди обновяването създайте архив на ученическия профил.
+
+Официалната версия v0.5.0 поддържа обновяване от v0.4.0 със запазване на:
+
+- профила;
+- старите отговори;
+- последното учебно място;
+- показателите и учебната история;
+- schemaVersion 4;
+- архивите и трансферното състояние.
+
 ## Проверка на изтегления файл
 
 Към Windows пакета е публикуван отделен SHA-256 файл:
 
-`NVO-Matematika-7-Windows-x64-v0.4.0-unsigned.zip.sha256`
+`NVO-Matematika-7-Windows-x64-v0.5.0-unsigned.zip.sha256`
 
 За ръчна проверка отворете PowerShell в папката с изтегления ZIP файл и изпълнете:
 
 ```powershell
-Get-FileHash -LiteralPath '.\NVO-Matematika-7-Windows-x64-v0.4.0-unsigned.zip' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\NVO-Matematika-7-Windows-x64-v0.5.0-unsigned.zip' -Algorithm SHA256
