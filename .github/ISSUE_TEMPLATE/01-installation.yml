@@ -1,0 +1,180 @@
+name: "🧰 Проблем при инсталиране или стартиране"
+description: "Използвай този формуляр, ако приложението не се изтегля, проверява, инсталира или стартира."
+title: "[Инсталация] "
+labels:
+  - "инсталация"
+  - "технически проблем"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Здравей! 👋
+
+        Благодарим ти, че съобщаваш за проблема.
+
+        Не е нужно да знаеш техническото му име. Разкажи какво направи, какво очакваше да стане и какво се случи на екрана.
+
+        > ⚠️ **Този сигнал ще бъде публичен.**
+        >
+        > Не публикувай пълното си име, училище, клас, телефон, личен имейл, пароли, `progress.json`, архив на профила, трансферни файлове или кодове за възстановяване.
+
+  - type: dropdown
+    id: problem-stage
+    attributes:
+      label: "На коя стъпка възникна проблемът?"
+      description: "Избери момента, в който нещо спря да работи."
+      options:
+        - "Изтегляне на Windows ZIP файла"
+        - "Извличане на ZIP файла чрез „Извлечи всички“"
+        - "Стартиране на PROVERI-NVO-PAKETA.bat"
+        - "SHA-256 проверка на пакета"
+        - "Избор на папка за инсталиране"
+        - "Първо стартиране на приложението"
+        - "Създаване на ученически профил"
+        - "Стартиране на вече инсталирано приложение"
+        - "Приложението се отваря, но страницата не се зарежда"
+        - "Друго"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: app-version
+    attributes:
+      label: "Коя версия използваш?"
+      description: "Версията се вижда в контролния прозорец и в лявата част на приложението."
+      options:
+        - "v0.5.0"
+        - "v0.4.0"
+        - "По-стара версия"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: download-source
+    attributes:
+      label: "Откъде получи инсталационния файл?"
+      options:
+        - "От официалното публично хранилище nvo-matematika-7-downloads"
+        - "От учител или родител"
+        - "От друг човек"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: windows-version
+    attributes:
+      label: "Коя версия на Windows използваш?"
+      options:
+        - "Windows 11"
+        - "Windows 10"
+        - "Друга версия на Windows"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: "Кой браузър използваш?"
+      options:
+        - "Google Chrome"
+        - "Mozilla Firefox"
+        - "Microsoft Edge"
+        - "Друг браузър"
+        - "Браузърът не се отвори"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: "Какво се случи?"
+      description: "Опиши проблема със свои думи. Не е нужно да използваш технически изрази."
+      placeholder: |
+        Например:
+        След като стартирах PROVERI-NVO-PAKETA.bat, проверката приключи, но приложението не се отвори.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: "Какво очакваше да се случи?"
+      placeholder: |
+        Например:
+        Очаквах след успешната проверка да се отвори контролният прозорец и приложението в браузъра.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: "Как можем да повторим проблема?"
+      description: "Опиши стъпките в реда, в който ги направи."
+      placeholder: |
+        1. Изтеглих Windows ZIP файла.
+        2. Избрах „Извлечи всички“.
+        3. Отворих разархивираната папка.
+        4. Стартирах PROVERI-NVO-PAKETA.bat.
+        5. Появи се...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: verifier-result
+    attributes:
+      label: "Какво показа PROVERI-NVO-PAKETA.bat?"
+      options:
+        - "ПРОВЕРКАТА Е УСПЕШНА"
+        - "Проверката беше неуспешна"
+        - "Файлът не се стартира"
+        - "Не стигнах до тази стъпка"
+        - "Не помня"
+    validations:
+      required: true
+
+  - type: textarea
+    id: exact-error
+    attributes:
+      label: "Точният текст на грешката"
+      description: "Препиши или копирай съобщението. Ако няма текстова грешка, напиши „Няма“."
+      placeholder: |
+        Например:
+        Windows cannot access the specified device, path, or file.
+
+        Или:
+        Няма текстова грешка — прозорецът просто се затваря.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Снимка на проблема — по избор"
+      description: |
+        Можеш да плъзнеш снимка в това поле.
+
+        Преди качване скрий пълното си име, училище, имейл, имена на лични папки и други лични данни. Не качвай цял профил, progress.json, архив или трансферен файл.
+      placeholder: "Плъзни снимката тук или остави полето празно."
+
+  - type: checkboxes
+    id: privacy-confirmation
+    attributes:
+      label: "Проверка за поверителност"
+      options:
+        - label: "Проверих, че сигналът и снимките не съдържат пълно име, училище, телефон, имейл, парола или друга лична информация."
+          required: true
+        - label: "Не прикачвам progress.json, архив на профила, трансферен файл или код за възстановяване."
+          required: true
+
+  - type: checkboxes
+    id: final-confirmation
+    attributes:
+      label: "Последна проверка"
+      options:
+        - label: "Описах какво направих и какво се случи."
+          required: true
