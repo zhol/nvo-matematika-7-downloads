@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: "🙋 Не разбирам задача или част от приложението"
+    url: "https://github.com/zhol/nvo-matematika-7-downloads/discussions"
+    about: "Задай учебен въпрос в категорията „Въпроси и помощ“. Не създавай Issue, ако просто имаш нужда от обяснение."
+
+  - name: "💡 Имам идея или предложение"
+    url: "https://github.com/zhol/nvo-matematika-7-downloads/discussions"
+    about: "Сподели идея в категорията „Идеи и предложения“."
