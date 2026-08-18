@@ -1,0 +1,239 @@
+name: "🔄 Проблем при обновяване или възстановяване"
+description: "Използвай този формуляр при проблем с update, архив, възстановяване, rollback или прехвърляне на профил."
+title: "[Обновяване] "
+labels:
+  - "обновяване"
+  - "технически проблем"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Здравей! 👋
+
+        Благодарим ти, че съобщаваш за проблема.
+
+        Опиши какво направи и какво се случи. Не е необходимо да знаеш техническото име на грешката.
+
+        > ⚠️ **Този сигнал ще бъде публичен.**
+        >
+        > Не публикувай пълното си име, училище, клас, телефон, личен имейл, пароли, `progress.json`, архив на профила, `.nvo-transfer`, `.nvo-recovery`, кодове за активиране или възстановяване.
+
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: "Какъв тип проблем възникна?"
+      description: "Избери най-близкия отговор."
+      options:
+        - "Обновяването не започва"
+        - "Обновяването завърши с грешка"
+        - "Предишната версия беше възстановена автоматично"
+        - "Приложението не стартира след обновяване"
+        - "Профилът или част от напредъка липсват след обновяване"
+        - "Проблем при създаване на архив"
+        - "Проблем при възстановяване от архив"
+        - "Проблем при прехвърляне на профил на друг компютър"
+        - "Проблем с авариен код или recovery файл"
+        - "Друго"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source-version
+    attributes:
+      label: "От коя версия започна?"
+      description: "Версията се вижда в контролния прозорец и в лявата част на приложението."
+      options:
+        - "v0.5.0"
+        - "v0.4.0"
+        - "По-стара версия"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-version
+    attributes:
+      label: "Към коя версия опита да обновиш?"
+      options:
+        - "v0.5.0"
+        - "Друга версия"
+        - "Не извършвах обновяване"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: update-source
+    attributes:
+      label: "Откъде получи пакета или инструкциите?"
+      options:
+        - "От официалното публично хранилище nvo-matematika-7-downloads"
+        - "От официален GitHub Release на основния проект"
+        - "От учител или родител"
+        - "От друг човек"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: "Коя версия на Windows използваш?"
+      options:
+        - "Windows 11"
+        - "Windows 10"
+        - "Друга версия на Windows"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: application-state
+    attributes:
+      label: "Какво е състоянието на приложението сега?"
+      options:
+        - "Стартира нормално"
+        - "Стартира, но профилът или данните липсват"
+        - "Стартира старата версия"
+        - "Стартира новата версия"
+        - "Не стартира"
+        - "Показва прозорец за възстановяване"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: profile-data
+    attributes:
+      label: "Какво се случи с ученическия профил и напредъка?"
+      options:
+        - "Всичко е запазено"
+        - "Профилът е наличен, но липсват някои отговори"
+        - "Профилът е наличен, но последното място е променено"
+        - "Профилът не се вижда"
+        - "Не мога да проверя, защото приложението не стартира"
+        - "Не знам"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: backup-status
+    attributes:
+      label: "Имаш ли архив на профила отпреди проблема?"
+      options:
+        - "Да"
+        - "Не"
+        - "Не знам"
+        - "Проблемът е възникнал при самото създаване на архива"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: "Какво се случи?"
+      description: "Опиши проблема със свои думи."
+      placeholder: |
+        Например:
+        Стартирах обновяването от v0.4.0 към v0.5.0.
+        След няколко стъпки се появи съобщение, че предишната версия е възстановена.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: "Какво очакваше да се случи?"
+      placeholder: |
+        Например:
+        Очаквах приложението да стартира като v0.5.0 със същия профил и старите ми отговори.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: "Как можем да повторим проблема?"
+      description: "Опиши действията в точния им ред."
+      placeholder: |
+        1. Спрях приложението.
+        2. Стартирах NVO-Updater.exe.
+        3. Избрах папката на приложението.
+        4. Избрах папката на update пакета.
+        5. Натиснах „Започни обновяването“.
+        6. Появи се...
+    validations:
+      required: true
+
+  - type: textarea
+    id: exact-message
+    attributes:
+      label: "Точният текст на съобщението или грешката"
+      description: "Копирай текста от прозореца. Ако няма съобщение, напиши „Няма“."
+      placeholder: |
+        Например:
+        Обновяването не беше приложено.
+        Предишната версия е възстановена.
+
+        Или:
+        Няма текстова грешка — приложението просто не се стартира.
+    validations:
+      required: true
+
+  - type: textarea
+    id: updater-log
+    attributes:
+      label: "Какво показа журналът на updater-а?"
+      description: "Препиши последните няколко реда. Не публикувай лични пътища, ако съдържат пълното ти име."
+      placeholder: |
+        Например:
+        Проверка на update пакета...
+        Архивиране на ученическия напредък...
+        Възстановяване на предишната версия...
+
+        Ако updater не е използван, напиши:
+        Не използвах updater.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Снимка на проблема — по избор"
+      description: |
+        Можеш да плъзнеш снимка в това поле.
+
+        Преди качване скрий пълното си име, имейл, училище, имена на лични папки и други лични данни.
+
+        Не качвай progress.json, архив, transfer/recovery файл или снимка на код за възстановяване.
+      placeholder: "Плъзни снимката тук или остави полето празно."
+
+  - type: checkboxes
+    id: safety-actions
+    attributes:
+      label: "Какво вече провери?"
+      description: "Отбележи само действията, които действително си направил."
+      options:
+        - label: "Спрях приложението безопасно преди обновяването."
+        - label: "Използвах официалния пакет или официалните инструкции."
+        - label: "Не редактирах update-manifest.json или файловете в payload."
+        - label: "Не изтрих ръчно student-data или backups."
+
+  - type: checkboxes
+    id: privacy-confirmation
+    attributes:
+      label: "Проверка за поверителност"
+      options:
+        - label: "Проверих, че текстът и снимките не съдържат пълно име, училище, телефон, имейл, парола или друга лична информация."
+          required: true
+        - label: "Не прикачвам progress.json, архив на профила, transfer/recovery файл или код за възстановяване."
+          required: true
+
+  - type: checkboxes
+    id: final-confirmation
+    attributes:
+      label: "Последна проверка"
+      options:
+        - label: "Описах какво направих, какво очаквах и какво се случи."
+          required: true
